@@ -1,9 +1,11 @@
-form(action="localhost:3000/", method="get")
+form()
+    label="MSSV : "
     input(type="text", name="mssv")
     input(type="submit", value="OK")
+    form(action="localhost:3000/" + mssv, method="get")
 
 .ctmh
-    content= ctmh.tenSV
+    
     table
         thread
             tr
@@ -15,7 +17,6 @@ form(action="localhost:3000/", method="get")
                 th Ten Sinh Vien
         tbody
         each mh in ctmh
-            
             tr
                 td= mh.ngayHoc
                 td= mh.tietDau
@@ -23,3 +24,4 @@ form(action="localhost:3000/", method="get")
                 td= mh.lopHoc
                 td= mh.giangVien
                 td= mh.tenSV
+        
