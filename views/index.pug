@@ -1,0 +1,25 @@
+form(action="localhost:3000/", method="get")
+    input(type="text", name="mssv")
+    input(type="submit", value="OK")
+
+.ctmh
+    content= ctmh.tenSV
+    table
+        thread
+            tr
+                th Ngay Hoc
+                th Tiet bat dau
+                th Ten Mon Hoc
+                th Phong Hoc
+                th Giang Vien
+                th Ten Sinh Vien
+        tbody
+        each mh in ctmh
+            
+            tr
+                td= mh.ngayHoc
+                td= mh.tietDau
+                td= mh.tenMh
+                td= mh.lopHoc
+                td= mh.giangVien
+                td= mh.tenSV
